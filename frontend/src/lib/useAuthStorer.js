@@ -2,7 +2,7 @@ import { create } from 'zustand'
 import { axiosInstance } from './axios.js'
 import toast from 'react-hot-toast';
 import { io } from 'socket.io-client';
-const BASEURL="http://localhost:5001/api";
+const BASEURL=import.meta.env.MODE=="development"?"http://localhost:5001":"/";
 export const useAuthStorer=create((set,get)=>({
     authUser:null,
     isSigningUp:false,
