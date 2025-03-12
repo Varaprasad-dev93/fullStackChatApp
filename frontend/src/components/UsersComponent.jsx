@@ -45,6 +45,7 @@ export default function UsersComponent() {
     useEffect(()=>{
         getUsers();
     },[]);
+    // console.log(users)
     if(isUsersLoading){
         return(
             <div className='flex justify-center h-full items-center'>
@@ -66,7 +67,7 @@ export default function UsersComponent() {
     const Contacts=()=>{
         return (
             <div className=' p-3 space-y-3 '>
-            {users.map((user) => (
+            {users?.map((user) => (
                 <button 
                     key={user._id}
                     className={`flex items-center w-full p-3 rounded-lg shadow-sm transition-all duration-300 ${

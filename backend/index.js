@@ -25,7 +25,7 @@ app.use("/api/messages",Protected,messageRout);
 //This if block is executed when we are deploying bith the backend and frontend at a same time with same package.json file
 if(process.env.NODE_ENV=="production"){
     app.use(express.static(path.join(__dirname,"../frontend/dist")))
-
+    console.log("HII")
     app.get("*",(req,res)=>{
         res.sendFile(path.join(__dirname,"../frontend","dist","index.html"))
     })

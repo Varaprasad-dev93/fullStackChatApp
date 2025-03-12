@@ -7,7 +7,7 @@ export const Users=async (req,res)=>{
     try {
         const loggedId= req.user._id;
         const filteredUsers=await User.find({_id:{$ne:loggedId}}).select("-password");
-        // console.log(filteredUsers)
+        console.log(filteredUsers,"Hii")
        return res.status(201).json(filteredUsers);
     } catch (error) {
        return res.status(500).json("Internal error on fetching : "+error);
