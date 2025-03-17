@@ -66,7 +66,7 @@ export default function UsersComponent() {
 
     const Contacts=()=>{
         return (
-            <div className=' p-3 space-y-3 '>
+            <div className=' p-3 space-y-3 cursor-pointer '>
             {users?.map((user) => (
                 <button 
                     key={user._id}
