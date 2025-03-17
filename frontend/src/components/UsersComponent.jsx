@@ -66,11 +66,11 @@ export default function UsersComponent() {
 
     const Contacts=()=>{
         return (
-            <div className=' p-3 space-y-3 cursor-pointer '>
+            <div className=' p-3 space-y-3  '>
             {users?.map((user) => (
                 <button 
                     key={user._id}
-                    className={`flex items-center w-full p-3 rounded-lg shadow-sm transition-all duration-300 ${
+                    className={`flex cursor-pointer items-center w-full p-3 rounded-lg shadow-sm transition-all duration-300 ${
                         user._id === selectedUser?._id
                           ? "bg-blue-500 text-white"
                           : "bg-gray-800 hover:bg-gray-700 text-gray-300"
